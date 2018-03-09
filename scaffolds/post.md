@@ -1,10 +1,5 @@
-layout: post
+---
 title: {{ title }}
 date: {{ date }}
-updated: {{ date }}
-comment: true
-tags: []
+tags:
 ---
-
-------
-main body.
