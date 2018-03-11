@@ -22,6 +22,7 @@
 </div>
 
 {% if theme.footer.powered %}
+  
   <div class="powered-by">{#
   #}{{ __('footer.powered', '<a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a>') }}{#
 #}</div>
@@ -43,5 +44,5 @@
 {% if theme.footer.custom_text %}
   <div class="footer-custom">{#
   #}{{ theme.footer.custom_text }}{#
-#}</div>
+#}&nbsp;&nbsp; <strong>|</strong>&nbsp;&nbsp;<span class="post-count">我在这里一共写下了&nbsp;<strong>{{ totalcount(site) }}</strong>&nbsp;字</span></div>
 {% endif %}

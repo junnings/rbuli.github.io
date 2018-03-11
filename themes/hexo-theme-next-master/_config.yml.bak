@@ -51,7 +51,7 @@ footer:
   icon: user
 
   # If not defined, will be used `author` from Hexo main config.
-  copyright: by Rbuli
+  copyright: by RbuLi
   # -------------------------------------------------------------
   # Hexo link (Powered by Hexo).
   powered: false

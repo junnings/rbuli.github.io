@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Rbuli's Blog 
+title: Rbubi's Blog 
 subtitle: HELLO&nbsp;:&nbsp;)
 description: 多少感动心中留，一生热爱难回头。
 author: Rbuli
@@ -82,10 +82,6 @@ deploy:
     github: git@github.com:/rbuli/rbuli.github.io.git
   branch: master
 
-# Extensions Rss
+# Extensions Rss璁剧疆
 ## Plugins: http://hexo.io/plugins/
 plugins: hexo-generate-feed
-
-# Online contact 
-daovoice: true
-daovoice_app_id: 1542e3e1
