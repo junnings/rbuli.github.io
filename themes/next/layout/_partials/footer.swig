@@ -3,7 +3,7 @@
 #}&copy; {% if theme.footer.since and theme.footer.since != current %}{{ theme.footer.since }} - {% endif %}{#
 #}<span itemprop="copyrightYear">{{ current }}</span>
   <span class="with-love">
-    ❤
+    <i class="fa fa-heartbeat"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">{{ theme.footer.copyright || config.author }}</span>
 
