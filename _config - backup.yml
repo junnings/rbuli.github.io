@@ -3,8 +3,8 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: rbuli's Notes
-subtitle: notepad
+title: rbuli
+subtitle:
 description:
 keywords:
 author: rbuli
@@ -75,20 +75,7 @@ pagination_dir: page
 ## Themes: https://hexo.io/themes/
 theme: next
 
-#rss
-plugins: hexo-generate-feed
-
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type: git
-  repository:
-    github: git@github.com:/rbuli/rbuli.github.io.git
-  branch: master
-
-#添加百度/谷歌/本地 自定义站点内容搜索
-search:
-  path: search.xml
-  field: post
-  format: html
-  limit: 10000
+  type:
