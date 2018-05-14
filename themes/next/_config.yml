@@ -527,15 +527,15 @@ busuanzi_count:
   # count values only if the other configs are false
   enable: true
   # custom uv span for the whole site  
-  site_uv: true
+  site_uv: false
   site_uv_header: 欢迎第
   site_uv_footer: 位小伙伴
   # custom pv span for the whole site
-  site_pv: true
+  site_pv: false
   site_pv_header: <i class="fa fa-tags"></i> 欢迎第
   site_pv_footer: 位小伙伴
   # custom pv span for one page only
-  page_pv: true
+  page_pv: false
   page_pv_header: <i class="fa fa-free-code-camp"></i>  热度
   page_pv_footer: ℃
 
