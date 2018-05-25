@@ -10,8 +10,6 @@ tags:
 	- framework
 categories: 
 	- java
-	- framework
-	- mybatis
 	
 comments:
 ---

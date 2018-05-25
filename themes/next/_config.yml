@@ -76,6 +76,8 @@ menu:
   #sitemap: /sitemap.xml || sitemap
   #commonweal: /404/ || heartbeat
   messages: /messages || coffee
+  #blabla: /blabla || sticky-note
+  #read: /read || bookmark
 # Enable/Disable menu icons.
 menu_icons:
   enable: true
