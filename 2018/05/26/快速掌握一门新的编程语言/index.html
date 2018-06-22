@@ -1,0 +1,1288 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="随笔,编程,PL/SQL," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="rbuli's Notes" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="keywords" content="随笔,编程,PL&#x2F;SQL">
+<meta property="og:type" content="article">
+<meta property="og:title" content="快速掌握一门新的编程语言">
+<meta property="og:url" content="http://cssmini.com/2018/05/26/快速掌握一门新的编程语言/index.html">
+<meta property="og:site_name" content="rbuli&#39;s Notes">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://p6wzlnrcf.bkt.clouddn.com//blogimg/ltn_781d1773fd479c336a0e021963c4d9b920140710121257.jpeg">
+<meta property="og:updated_time" content="2018-06-22T04:03:37.748Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="快速掌握一门新的编程语言">
+<meta name="twitter:image" content="http://p6wzlnrcf.bkt.clouddn.com//blogimg/ltn_781d1773fd479c336a0e021963c4d9b920140710121257.jpeg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  <link rel="canonical" href="http://cssmini.com/2018/05/26/快速掌握一门新的编程语言/"/>
+
+
+
+
+
+  <title>快速掌握一门新的编程语言 | rbuli's Notes</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">rbuli's Notes</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">又起秋风🍂</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-messages">
+          <a href="/messages" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-coffee"></i> <br />
+            
+            留言板
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://cssmini.com/2018/05/26/快速掌握一门新的编程语言/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="rbuli">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://p6wzlnrcf.bkt.clouddn.com/%E5%A4%8F%E7%9B%AE%E5%8F%8B%E4%BA%BA%E5%B8%90-%E5%A4%B4%E5%83%8F.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="rbuli's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">快速掌握一门新的编程语言</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-26T19:21:11+08:00">
+                2018-05-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/SQL/" itemprop="url" rel="index">
+                    <span itemprop="name">SQL</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1,315
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  5
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><img src="http://p6wzlnrcf.bkt.clouddn.com//blogimg/ltn_781d1773fd479c336a0e021963c4d9b920140710121257.jpeg" alt="image"></p>
+<a id="more"></a>
+<p>1.熟悉语言背后的故事，比如优缺点，特性等(只需要了解大概就差不多了)。</p>
+<p>2.熟悉语言的运算符和表达式</p>
+<p>3.常量和变量的声明</p>
+<p>4.了解命名规则</p>
+<p>5.了解注释的使用</p>
+<p>6.了解数据类型</p>
+<p>7.掌握语言有哪些控制语句（无非就是顺序、选择、循环等）</p>
+<p>8.异常处理</p>
+<p>9.语言独有的特点</p>
+<p>10.语言环境搭建</p>
+<p>11.常用的ide</p>
+<p>12.代码编写规范</p>
+<p>根据以上的总结，我实践学习了PL/SQL</p>
+<h1 id="1-熟悉语言背后的故事，比如优缺点，特性等-只需要了解大概就差不多了-。"><a href="#1-熟悉语言背后的故事，比如优缺点，特性等-只需要了解大概就差不多了-。" class="headerlink" title="1.熟悉语言背后的故事，比如优缺点，特性等(只需要了解大概就差不多了)。"></a>1.熟悉语言背后的故事，比如优缺点，特性等(只需要了解大概就差不多了)。</h1><p>&emsp;&emsp;PL/SQL(Procedural Language/SQL ,过程语言/SQL)是结合了Oracle过程语言和结构化查询语言（SQL）的一种扩展语言。使用PL/SQL可以编写具有很多高级功能的程序，虽然通过多个sql语句也能实现同样的功能，但是相比而言，PL/SQL具有更为明显的一些优点。（百度上面都有，就不赘述了）</p>
+<h1 id="2-熟悉语言的运算符和表达式"><a href="#2-熟悉语言的运算符和表达式" class="headerlink" title="2.熟悉语言的运算符和表达式"></a>2.熟悉语言的运算符和表达式</h1><p>PS:搜索了一下，就是些通用的运算符.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">关系运算符：</span><br><span class="line">    =                               // 等于</span><br><span class="line">    &lt;&gt;,!=,~=,^=                     // 不等于</span><br><span class="line">    &lt;                               // 小于</span><br><span class="line">    &gt;                               // 大于</span><br><span class="line">    &lt;=                              // 小于等于</span><br><span class="line">    &gt;=                              // 大于等于</span><br><span class="line">    </span><br><span class="line">一般运算符：</span><br><span class="line">    +                               // 加号</span><br><span class="line">    -                               // 减号</span><br><span class="line">    *                               // 乘号</span><br><span class="line">    /                               // 除号</span><br><span class="line">    :=                              // 赋值号</span><br><span class="line">    =&gt;                              // 关系号</span><br><span class="line">    ..                              // 范围运算符</span><br><span class="line">    ||                              // 字符连接符</span><br><span class="line">逻辑运算符：</span><br><span class="line">    IS NULL                         // 是空值   </span><br><span class="line">    BETWEEN AND                     // 介于两者之间</span><br><span class="line">    IN                              // 在一列值之间</span><br><span class="line">    AND                             // 与</span><br><span class="line">    OR                              // 或</span><br><span class="line">    NOT                             // 取反</span><br></pre></td></tr></table></figure></p>
+<h1 id="3-常量和变量的声明"><a href="#3-常量和变量的声明" class="headerlink" title="3.常量和变量的声明"></a>3.常量和变量的声明</h1><p>&emsp;&emsp;在PL/SQL块的可执行部分引用变量和常量前，必须先进行声明。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">//声明变量的语法：</span><br><span class="line">    variable_name data_type[(size)] [:=init_value];</span><br><span class="line">/*</span><br><span class="line">在语法中：</span><br><span class="line">    1.variable_name表示变量名称</span><br><span class="line">    2.data_type表示变量的SQL或/PL/SQL数据类型</span><br><span class="line">    3.size是指定变量的范围</span><br><span class="line">    4.init_value指的是变量的初始值</span><br><span class="line">*/</span><br><span class="line"></span><br><span class="line">//声明常量的语法：</span><br><span class="line">    variable_name CONSTANT data_type := value;</span><br><span class="line">/*</span><br><span class="line">PL/SQL程序设计中的标识符定义与SQL的标识符定义的要求相同，要求与限制如下：</span><br><span class="line">    1.标识符名不能超过30个字符</span><br><span class="line">    2.第一个字符必须为字母</span><br><span class="line">    3.不区分大小写</span><br><span class="line">    4.不能用 “-” 减号</span><br><span class="line">    5. 不能是SQL保留字</span><br><span class="line">*/</span><br></pre></td></tr></table></figure></p>
+<h1 id="4-了解命名规则"><a href="#4-了解命名规则" class="headerlink" title="4.了解命名规则"></a>4.了解命名规则</h1><h1 id="【假装有张变量命名方法表】"><a href="#【假装有张变量命名方法表】" class="headerlink" title="【假装有张变量命名方法表】"></a>【假装有张变量命名方法表】</h1><p>根据上图可以很清楚的了解PL/SQL的命名规范</p>
+<h1 id="5-了解注释的使用"><a href="#5-了解注释的使用" class="headerlink" title="5.了解注释的使用"></a>5.了解注释的使用</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">两种方式：</span><br><span class="line">    1. 使用双减号 ‘ -- ’加注释（单行注释）</span><br><span class="line">    2. 使用 ‘ /* 我是注释 */ ’加注释 （多行注释）</span><br></pre></td></tr></table></figure>
+<h1 id="6-了解数据类型"><a href="#6-了解数据类型" class="headerlink" title="6.了解数据类型"></a>6.了解数据类型</h1><p>百度查了一波，粗略总结，共有三大类：</p>
+<ul>
+<li>标量数据类型</li>
+<li>LOB数据类型</li>
+<li>属性类型</li>
+</ul>
+<h1 id="7-掌握语言有哪些控制语句"><a href="#7-掌握语言有哪些控制语句" class="headerlink" title="7.掌握语言有哪些控制语句"></a>7.掌握语言有哪些控制语句</h1><p>&emsp;&emsp;PL/SQL程序可通过控制结构来控制命令执行的流程。标准的SQL没有流程控制的概念，而PL/SQL提供了丰富的流程控制语句。</p>
+<p>&emsp;&emsp;控制结构共有三种类型，具体包括条件控制，循环控制和顺序控制。</p>
+<h2 id="条件控制"><a href="#条件控制" class="headerlink" title="条件控制"></a>条件控制</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line">/*</span><br><span class="line">    1.条件控制，条件控制包括两个 IF 语句和 CASE 语句</span><br><span class="line">*/</span><br><span class="line">//if语句语法：</span><br><span class="line">    IF &lt;布尔表达式&gt; THEN</span><br><span class="line">        PL/SQL 和 SQL语句</span><br><span class="line">    END IF;</span><br><span class="line">    ----------------</span><br><span class="line">    IF &lt;布尔表达式&gt; THEN</span><br><span class="line">        PL/SQL 和 SQL 语句</span><br><span class="line">    ELSE</span><br><span class="line">        其他语句</span><br><span class="line">    END IF;</span><br><span class="line">    ---------------</span><br><span class="line">    IF &lt;布尔表达式&gt; THEN</span><br><span class="line">        PL/SQL 和 SQL 语句</span><br><span class="line">    ELSIF &lt;其他布尔表达式&gt; THEN</span><br><span class="line">        其他语句</span><br><span class="line">    ELSIF &lt;其他布尔表达式&gt; THEN</span><br><span class="line">        其他语句</span><br><span class="line">    ELSE</span><br><span class="line">        其他语句</span><br><span class="line">    END IF;</span><br><span class="line">    //else if 有点另类这里要写成 elsif</span><br><span class="line"></span><br><span class="line">//CASE 语句语法：</span><br><span class="line">    ----------------</span><br><span class="line">    CASE 条件表达式</span><br><span class="line">        WHEN 条件表达式结果1 THEN</span><br><span class="line">            语句段1</span><br><span class="line">        WHEN 条件表达式结果2 THEN</span><br><span class="line">            语句段2</span><br><span class="line">        ...</span><br><span class="line">        WHEN 条件表达式结果n THEN</span><br><span class="line">            语句段n</span><br><span class="line">        [ELSE 语句段]</span><br><span class="line">    END CASE;</span><br><span class="line">    </span><br><span class="line">    --------------</span><br><span class="line">    CASE</span><br><span class="line">        WHEN 条件表达式1 THEN</span><br><span class="line">            语句段1</span><br><span class="line">        WHEN 条件表达式2 THEN</span><br><span class="line">            语句段2</span><br><span class="line">        ...</span><br><span class="line">        WHEN 条件表达式n THEN</span><br><span class="line">            语句段n</span><br><span class="line">        [ELSE 语句段]</span><br><span class="line">    END CASE;</span><br></pre></td></tr></table></figure>
+<h2 id="循环控制"><a href="#循环控制" class="headerlink" title="循环控制"></a>循环控制</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">/*</span><br><span class="line">    2.循环共有三种类型，包括 LOOP 循环，WHILE 循环和 FOR循环。</span><br><span class="line">*/</span><br><span class="line"></span><br><span class="line">//LOOP循环语法:</span><br><span class="line">    LOOP</span><br><span class="line">        要执行的语句;</span><br><span class="line">        EXIT WHEN &lt;条件语句&gt; --条件满足，退出循环语句</span><br><span class="line">    END LOOP;</span><br><span class="line">    </span><br><span class="line">//WHILE 循环语法：</span><br><span class="line">    WHILE &lt;布尔表达式&gt; LOOP</span><br><span class="line">        要执行的语句;</span><br><span class="line">    END LOOP;</span><br><span class="line">    </span><br><span class="line">//FOR 循环语法</span><br><span class="line">    FOR 循环计数器 IN [REVERSE] ... 上限 LOOP</span><br><span class="line">        要执行的语句；</span><br><span class="line">    END LOOP;</span><br></pre></td></tr></table></figure>
+<h2 id="顺序控制"><a href="#顺序控制" class="headerlink" title="顺序控制"></a>顺序控制</h2><p>&emsp;&emsp;顺序控制用于按顺序执行语句。顺序控制包括NULL语句和GOTO语句。GOTO 语句不推荐使用。</p>
+<p>&emsp;&emsp;NULL语句：NULL语句是一个可执行语句，相当于一个占位符或不执行任何操作的空语句，可以使得某些语句变得有完整性，提供程序的可读性，保证其他语句结构的完整性和正确性。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    rbuli
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://cssmini.com/2018/05/26/快速掌握一门新的编程语言/" title="快速掌握一门新的编程语言">http://cssmini.com/2018/05/26/快速掌握一门新的编程语言/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/随笔/" rel="tag"><i class="fa fa-tag"></i> 随笔</a>
+          
+            <a href="/tags/编程/" rel="tag"><i class="fa fa-tag"></i> 编程</a>
+          
+            <a href="/tags/PL-SQL/" rel="tag"><i class="fa fa-tag"></i> PL/SQL</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+
+        
+
+        
+          
+          <div id="needsharebutton-postbottom">
+            <span class="btn">
+              <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </span>
+          </div>
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/05/16/什么是单例模式/" rel="next" title="什么是单例模式">
+                <i class="fa fa-chevron-left"></i> 什么是单例模式
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/06/20/vue开发环境搭建/" rel="prev" title="vue开发环境搭建">
+                vue开发环境搭建 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="http://p6wzlnrcf.bkt.clouddn.com/%E5%A4%8F%E7%9B%AE%E5%8F%8B%E4%BA%BA%E5%B8%90-%E5%A4%B4%E5%83%8F.gif"
+                alt="rbuli" />
+            
+              <p class="site-author-name" itemprop="name">rbuli</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">18</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/rbuli" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.zhihu.com/people/strone-65/activities" target="_blank" title="知乎">
+                      
+                        <i class="fa fa-fw fa-paper-plane-o"></i>知乎</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                我的朋友们
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://openGPS.cn" title="openGPS" target="_blank">openGPS</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-熟悉语言背后的故事，比如优缺点，特性等-只需要了解大概就差不多了-。"><span class="nav-number">1.</span> <span class="nav-text">1.熟悉语言背后的故事，比如优缺点，特性等(只需要了解大概就差不多了)。</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-熟悉语言的运算符和表达式"><span class="nav-number">2.</span> <span class="nav-text">2.熟悉语言的运算符和表达式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-常量和变量的声明"><span class="nav-number">3.</span> <span class="nav-text">3.常量和变量的声明</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-了解命名规则"><span class="nav-number">4.</span> <span class="nav-text">4.了解命名规则</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#【假装有张变量命名方法表】"><span class="nav-number">5.</span> <span class="nav-text">【假装有张变量命名方法表】</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-了解注释的使用"><span class="nav-number">6.</span> <span class="nav-text">5.了解注释的使用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#6-了解数据类型"><span class="nav-number">7.</span> <span class="nav-text">6.了解数据类型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#7-掌握语言有哪些控制语句"><span class="nav-number">8.</span> <span class="nav-text">7.掌握语言有哪些控制语句</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#条件控制"><span class="nav-number">8.1.</span> <span class="nav-text">条件控制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#循环控制"><span class="nav-number">8.2.</span> <span class="nav-text">循环控制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#顺序控制"><span class="nav-number">8.3.</span> <span class="nav-text">顺序控制</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heartbeat"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">rbuli</span>
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-pie-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">博客总字数&#58</span>
+    
+    <span title="Site words total count">10.7k</span>
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+
+
+
+
+  <div class="footer-custom">Hosted by <a href="https://pages.coding.me" >Coding Pages</a> || <a target="_blank" href="https://pages.github.com">GitHub Pages</a></div>
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
+
+  
+  
+  <script src="/lib/needsharebutton/needsharebutton.js"></script>
+
+  <script>
+    
+      pbOptions = {};
+      
+          pbOptions.iconStyle = "box";
+      
+          pbOptions.boxForm = "horizontal";
+      
+          pbOptions.position = "bottomCenter";
+      
+          pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+    
+    
+  </script>
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

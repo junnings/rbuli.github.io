@@ -1,0 +1,1312 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Vue.js,前端,学习," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="rbuli's Notes" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="学习资源：vue中文文档  本文绝大部分资料摘录自Vue官方文档，目的是方便日后查阅与回顾。   Vue.js是什么&amp;emsp;&amp;emsp;Vue是一套用于构建用户界面的 渐进式框架。Vue被设计为可以自底向上逐层应用。Vue的核心库只关注视图层，不仅仅易于上手，还便于与第三方库或既有项目整合。">
+<meta name="keywords" content="Vue.js,前端,学习">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vue学习笔记">
+<meta property="og:url" content="http://cssmini.com/2018/06/20/vue学习笔记/index.html">
+<meta property="og:site_name" content="rbuli&#39;s Notes">
+<meta property="og:description" content="学习资源：vue中文文档  本文绝大部分资料摘录自Vue官方文档，目的是方便日后查阅与回顾。   Vue.js是什么&amp;emsp;&amp;emsp;Vue是一套用于构建用户界面的 渐进式框架。Vue被设计为可以自底向上逐层应用。Vue的核心库只关注视图层，不仅仅易于上手，还便于与第三方库或既有项目整合。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://p6wzlnrcf.bkt.clouddn.com//blogimg/ltn_8d57e363795eed710e628194cff447b720140710120059.jpeg">
+<meta property="og:updated_time" content="2018-06-22T04:16:03.581Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="vue学习笔记">
+<meta name="twitter:description" content="学习资源：vue中文文档  本文绝大部分资料摘录自Vue官方文档，目的是方便日后查阅与回顾。   Vue.js是什么&amp;emsp;&amp;emsp;Vue是一套用于构建用户界面的 渐进式框架。Vue被设计为可以自底向上逐层应用。Vue的核心库只关注视图层，不仅仅易于上手，还便于与第三方库或既有项目整合。">
+<meta name="twitter:image" content="http://p6wzlnrcf.bkt.clouddn.com//blogimg/ltn_8d57e363795eed710e628194cff447b720140710120059.jpeg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  <link rel="canonical" href="http://cssmini.com/2018/06/20/vue学习笔记/"/>
+
+
+
+
+
+  <title>vue学习笔记 | rbuli's Notes</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">rbuli's Notes</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">又起秋风🍂</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-messages">
+          <a href="/messages" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-coffee"></i> <br />
+            
+            留言板
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://cssmini.com/2018/06/20/vue学习笔记/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="rbuli">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://p6wzlnrcf.bkt.clouddn.com/%E5%A4%8F%E7%9B%AE%E5%8F%8B%E4%BA%BA%E5%B8%90-%E5%A4%B4%E5%83%8F.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="rbuli's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">vue学习笔记</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-20T19:02:12+08:00">
+                2018-06-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1,450
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  6
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><img src="http://p6wzlnrcf.bkt.clouddn.com//blogimg/ltn_8d57e363795eed710e628194cff447b720140710120059.jpeg" alt="image"></p>
+<p>学习资源：<a href="https://cn.vuejs.org/v2/guide/installation.html" target="_blank" rel="noopener">vue中文文档</a></p>
+<blockquote>
+<p>本文绝大部分资料摘录自Vue官方文档，目的是方便日后查阅与回顾。</p>
+</blockquote>
+<hr>
+<h2 id="Vue-js是什么"><a href="#Vue-js是什么" class="headerlink" title="Vue.js是什么"></a>Vue.js是什么</h2><p>&emsp;&emsp;Vue是一套用于构建用户界面的 <strong>渐进式框架</strong>。Vue被设计为可以自底向上逐层应用。Vue的核心库只关注视图层，不仅仅易于上手，还便于与第三方库或既有项目整合。<br><a id="more"></a><br>&emsp;&emsp;Vue专注于渲染/更新非常简单的组件树的真实性能。组件的依赖是在渲染过程中自动追踪的。</p>
+<p>&emsp;&emsp;<strong>Vue整体思想</strong>：拥抱经典的Web技术，并在其上进行扩展。(看似贼深奥，其实就是说摈弃以往web技术的短板，吸纳好的方面，并站在巨人的肩膀上前行)</p>
+<p>&emsp;&emsp;Vue还贴心的提供了<a href="https://github.com/vuejs/vue-cli" target="_blank" rel="noopener">Vue-cli脚手架</a>，方便我们快速地构建项目。</p>
+<p>&emsp;&emsp;只需一条demo即可立即体验Vue开发的乐趣。（当然前提是你阅读了官方文档 /调皮脸）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=&quot;https://cdn.jsdelivr.net/npm/vue&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>以上内容摘录自 <strong>Vue官方文档</strong></p>
+</blockquote>
+<p><strong>附言：</strong></p>
+<p>&emsp;&emsp;优点很多，但只有动手尝试过才能有真正体会，立即打开官方文档进行尝试吧~<br>（不得不感慨一下，Vue的官方文档做得是真的很友好）</p>
+<h2 id="创建一个Vue实例"><a href="#创建一个Vue实例" class="headerlink" title="创建一个Vue实例"></a>创建一个Vue实例</h2><blockquote>
+<p>所有的Vue组件都是Vue实例，并且接受相同的选项对象。</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">//数据与方法</span><br><span class="line">//我们的数据对象</span><br><span class="line">var data = &#123; a: 1 &#125;</span><br><span class="line"></span><br><span class="line">//该对象被加入到一个Vue实例中</span><br><span class="line">var vm = new Vue(&#123;</span><br><span class="line">	data: data</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">//获取这个实例上的属性</span><br><span class="line">//返回源数据中对应的字段</span><br><span class="line">//alert(vm.a == data.a); =&gt; true</span><br><span class="line"></span><br><span class="line">//设置属性也会影响到原始数据</span><br><span class="line">//alert(&apos;vm.a: &apos;+vm.a +&apos;  --  data.a: &apos;+data.a)</span><br><span class="line"></span><br><span class="line">vm.a = 2;</span><br><span class="line">//vm.a 与 data.a 都改变了（引用传递）</span><br><span class="line">//alert(&apos;vm.a: &apos;+vm.a +&apos;  --  data.a: &apos;+data.a)</span><br><span class="line">data.a = 3;</span><br><span class="line">//同样改变</span><br><span class="line">//alert(&apos;vm.a: &apos;+vm.a +&apos;  --  data.a: &apos;+data.a)</span><br></pre></td></tr></table></figure>
+<p>以上所有操作都会得到即时响应，但是如果插入的值，不是在一开始就声明好的（例如上面的 data.a 属性），则不支持及时响应。</p>
+<p>实例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//我们在控制台向 data对象 添加一个新属性</span><br><span class="line">data.b = &apos;hi&apos;</span><br></pre></td></tr></table></figure></p>
+<p>这样的操作不能得到及时响应</p>
+<p><strong>解决办法：</strong> 在创建时即声明好，在晚些时候会使用到的字段并赋初始值。</p>
+<h2 id="插值"><a href="#插值" class="headerlink" title="插值"></a>插值</h2><h3 id="以文本的方式插入"><a href="#以文本的方式插入" class="headerlink" title="以文本的方式插入"></a>以文本的方式插入</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">//当mes的值被改变时，所有存在mes引用的位置，都将被即时更新</span><br><span class="line">&lt;span&gt;message: &#123;&#123; mes &#125;&#125;&lt;/span&gt;</span><br><span class="line"></span><br><span class="line">//执行一次性地插值</span><br><span class="line">&lt;span v-once&gt;这个将不会改变： &#123;&#123; mes &#125;&#125;&lt;/span&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="插入原始html"><a href="#插入原始html" class="headerlink" title="插入原始html"></a>插入原始html</h3><p>&emsp;&emsp;双括号会将数据解释为普通文本，而不是html代码。输出html需要使用 <strong>v-html</strong> 指令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;Using mustaches: &#123;&#123; rawHtml &#125;&#125;&lt;/p&gt;</span><br><span class="line">&lt;p&gt;Using v-html directive:&lt;span v-html=&quot;rawHtml&quot;&gt;&lt;/span&gt;&lt;p&gt;</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>&emsp;&ensp;感想：其实就是text()方法与html()地使用</p>
+</blockquote>
+<h2 id="使用JavaScript表达式"><a href="#使用JavaScript表达式" class="headerlink" title="使用JavaScript表达式"></a>使用JavaScript表达式</h2><p>&emsp;&emsp;Vue.js提供了完全地Javascript表达式支持。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123; number + 1 &#125;&#125;</span><br><span class="line">&#123;&#123; ok ? &apos;YES&apos; : &apos;NO&apos; &#125;&#125;</span><br><span class="line">&#123;&#123; message.split(&apos;&apos;).reverse().join(&apos;&apos;) &#125;&#125;</span><br><span class="line"></span><br><span class="line">&lt;div v-bind:id=&quot;&apos;list-&apos; + id&quot;&gt;  &lt;/div&gt;</span><br></pre></td></tr></table></figure></p>
+<p>&emsp;&emsp;但每个绑定都只能包含单个表达式。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--这是语句，不是表达式--&gt;</span><br><span class="line">&#123;&#123; var a = 1 &#125;&#125;</span><br><span class="line">&lt;!-- 控制流也不会生效，可用三元表达式替代--&gt;</span><br><span class="line">&#123;&#123; if(ok)&#123;return message&#125; &#125;&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h2><p>&emsp;&emsp;指令是带有 v- 前缀地特殊特性。它的预期是<strong>单个JavaScript表达式</strong>。职责是，当表达式地值改变时，将其产生的连带影响，响应式地作用于DOM。</p>
+<blockquote>
+<p>&emsp;&emsp;感想：和EL、JSTL的思想大同小异，表现形式不同而已。</p>
+</blockquote>
+<h2 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h2><p>&emsp;&emsp;有些指令能够接收一个 “参数”，在指令名称之后以冒号表示。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//例如用于响应式更新html</span><br><span class="line">&lt;a v-bind:href=&quot;url&quot;&gt;...&lt;/a&gt;</span><br></pre></td></tr></table></figure></p>
+<p>&emsp;&emsp;上面的 href 参数，使得 v-bind 指令将 <a> 标签的 href 的 url 进行绑定，可以实现动态改变该标签的跳转地址。</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a v-on:click=&quot;doSomething&quot;&gt;...&lt;/a&gt;</span><br></pre></td></tr></table></figure>
+<p>&emsp;&emsp;上面的指令 v-on 用于监听DOM事件。</p>
+<h2 id="缩写"><a href="#缩写" class="headerlink" title="缩写"></a>缩写</h2><p>&emsp;&emsp;Vue.js给 v-bind 和 v-on 这两个最常用的指令，提供了特点简写。</p>
+<h3 id="v-bind-缩写"><a href="#v-bind-缩写" class="headerlink" title="v-bind 缩写"></a>v-bind 缩写</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--完整语法--&gt;</span><br><span class="line">&lt;a v-ding:href=&quot;url&quot;&gt;...&lt;/a&gt;</span><br><span class="line">&lt;!--缩写--&gt;</span><br><span class="line">&lt;a :href=&quot;url&quot;&gt;...&lt;/a&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="v-on-缩写"><a href="#v-on-缩写" class="headerlink" title="v-on 缩写"></a>v-on 缩写</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--完整语法--&gt;</span><br><span class="line">&lt;a v-on:click=&quot;doSomething&quot;&gt;...&lt;/a&gt;</span><br><span class="line">&lt;!--缩写--&gt;</span><br><span class="line">&lt;a @click=&quot;doSomething&quot;&gt;...&lt;/a&gt;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>p.s：再次声明这不叫偷懒，这叫理性提高工作效率 /笑</p>
+</blockquote>
+<h2 id="计算属性"><a href="#计算属性" class="headerlink" title="计算属性"></a>计算属性</h2><p> &emsp;&emsp;在我们需要get元素属性之前，可以对这个属性进行操作，当我们拿到的就是经过特殊处理后的数据。</p>
+<p> &emsp;&emsp;由于是引用自源数据，所有当源数据被改变时，计算属性也会随之改变。（getter）</p>
+<p> <strong>实例：</strong><br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"> &lt;!--index.js--&gt;</span><br><span class="line"> var vm = new Vue(&#123;</span><br><span class="line">	el: &apos;#example&apos;,</span><br><span class="line">	data: &#123;</span><br><span class="line">		message: &apos;hello 你好&apos;</span><br><span class="line">	&#125;,</span><br><span class="line">	computed: &#123;</span><br><span class="line">		//计算属性的getter</span><br><span class="line">		reversedMessage:function()&#123;</span><br><span class="line">			//this 指向 vm 实例</span><br><span class="line">			return this.message.split(&apos;&apos;).reverse().join(&apos;&apos;)</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">&lt;!--index.html--&gt;</span><br><span class="line"></span><br><span class="line">&lt;div id=&quot;example&quot;&gt;</span><br><span class="line">	&lt;p&gt;Original message: &quot;&#123;&#123; message &#125;&#125;&quot;&lt;/p&gt;</span><br><span class="line">	&lt;p&gt;Conputed reversed message: &quot;&#123;&#123; reversedMessage&#125;&#125;&quot;&lt;/p&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure></p>
+<p> <strong>结果：</strong><br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"> Original message: &quot;hello 你好&quot;</span><br><span class="line"></span><br><span class="line">Conputed reversed message: &quot;好你 olleh&quot;</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>感想：可以看作是java中的字段封装，因为<strong>计算属性</strong> 同样存在  getter 与 setter 的表现形式。好玩的东西很多。</p>
+</blockquote>
+<h2 id="一点骚操作"><a href="#一点骚操作" class="headerlink" title="一点骚操作"></a>一点骚操作</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">new Vue(&#123;</span><br><span class="line">    el: &apos;#app&apos;,</span><br><span class="line">    render: h =&gt; h(App)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">等价于</span><br><span class="line"></span><br><span class="line">new Vue(&#123;</span><br><span class="line">    el: &apos;#app&apos;,</span><br><span class="line">    render: function(h)&#123;</span><br><span class="line">        return h(App)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">-----------------</span><br><span class="line">取反</span><br><span class="line"></span><br><span class="line">var flag = true;</span><br><span class="line">flag = ! falg;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>按照官方文档一路打下来，觉得有些概念还是挺模糊的，后来配合网上的教程一起进行学习，动手做个小项目下来基本的都能掌握。</p>
+</blockquote>
+<blockquote class="blockquote-center"><p>纸上得来终觉浅，绝知此事要躬行。 </p>
+</blockquote>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    rbuli
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://cssmini.com/2018/06/20/vue学习笔记/" title="vue学习笔记">http://cssmini.com/2018/06/20/vue学习笔记/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Vue-js/" rel="tag"><i class="fa fa-tag"></i> Vue.js</a>
+          
+            <a href="/tags/前端/" rel="tag"><i class="fa fa-tag"></i> 前端</a>
+          
+            <a href="/tags/学习/" rel="tag"><i class="fa fa-tag"></i> 学习</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+
+        
+
+        
+          
+          <div id="needsharebutton-postbottom">
+            <span class="btn">
+              <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </span>
+          </div>
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/06/20/vue开发环境搭建/" rel="next" title="vue开发环境搭建">
+                <i class="fa fa-chevron-left"></i> vue开发环境搭建
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="http://p6wzlnrcf.bkt.clouddn.com/%E5%A4%8F%E7%9B%AE%E5%8F%8B%E4%BA%BA%E5%B8%90-%E5%A4%B4%E5%83%8F.gif"
+                alt="rbuli" />
+            
+              <p class="site-author-name" itemprop="name">rbuli</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">18</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/rbuli" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.zhihu.com/people/strone-65/activities" target="_blank" title="知乎">
+                      
+                        <i class="fa fa-fw fa-paper-plane-o"></i>知乎</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                我的朋友们
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://openGPS.cn" title="openGPS" target="_blank">openGPS</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Vue-js是什么"><span class="nav-number">1.</span> <span class="nav-text">Vue.js是什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建一个Vue实例"><span class="nav-number">2.</span> <span class="nav-text">创建一个Vue实例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#插值"><span class="nav-number">3.</span> <span class="nav-text">插值</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#以文本的方式插入"><span class="nav-number">3.1.</span> <span class="nav-text">以文本的方式插入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#插入原始html"><span class="nav-number">3.2.</span> <span class="nav-text">插入原始html</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用JavaScript表达式"><span class="nav-number">4.</span> <span class="nav-text">使用JavaScript表达式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#指令"><span class="nav-number">5.</span> <span class="nav-text">指令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参数"><span class="nav-number">6.</span> <span class="nav-text">参数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#缩写"><span class="nav-number">7.</span> <span class="nav-text">缩写</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#v-bind-缩写"><span class="nav-number">7.1.</span> <span class="nav-text">v-bind 缩写</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#v-on-缩写"><span class="nav-number">7.2.</span> <span class="nav-text">v-on 缩写</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#计算属性"><span class="nav-number">8.</span> <span class="nav-text">计算属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一点骚操作"><span class="nav-number">9.</span> <span class="nav-text">一点骚操作</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heartbeat"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">rbuli</span>
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-pie-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">博客总字数&#58</span>
+    
+    <span title="Site words total count">10.7k</span>
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+
+
+
+
+  <div class="footer-custom">Hosted by <a href="https://pages.coding.me" >Coding Pages</a> || <a target="_blank" href="https://pages.github.com">GitHub Pages</a></div>
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
+
+  
+  
+  <script src="/lib/needsharebutton/needsharebutton.js"></script>
+
+  <script>
+    
+      pbOptions = {};
+      
+          pbOptions.iconStyle = "box";
+      
+          pbOptions.boxForm = "horizontal";
+      
+          pbOptions.position = "bottomCenter";
+      
+          pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+    
+    
+  </script>
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
