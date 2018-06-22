@@ -287,6 +287,38 @@
   </entry>
   
   <entry>
+    <title>千里之行--Java环境变量配置</title>
+    <link href="http://cssmini.com/2017/11/11/%E5%8D%83%E9%87%8C%E4%B9%8B%E8%A1%8C-Java%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE/"/>
+    <id>http://cssmini.com/2017/11/11/千里之行-Java环境变量配置/</id>
+    <published>2017-11-11T09:10:28.000Z</published>
+    <updated>2018-06-22T06:42:48.253Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="http://p6wzlnrcf.bkt.clouddn.com/wallhaven-638074.jpg" alt="image"></p><p>正所谓欲行其事，必利其器。学习Java也是这个道理。首先学习Java之前我们需要为Java搭建环境变量。大家可以把Java看成是一个需要细心呵护的孩子，在它来到一个陌生的世界时.</p><p>我们需要告诉它，它的家在哪里，门牌号是多少。出去玩的时候，它需要搭哪一辆公交车才能回到家。怎么样才不会迷路。</p><a id="more"></a><p>环境变量就是我们告诉它”地址“的地方。而Java它是一个非常聪明的孩子（不然我们也不会靠这个来吃饭对吧：） ，只需要你告诉它一遍就能够记住。刚刚上面所说的陌生世界就是电脑中的系统啦。</p><p>首先第一步我们需要告诉它</p><p>“它的家在哪里”</p><p>右键桌面上的“计算机图标”-“属性”-“高级系统设置”-“高级”-右下角有一个“环境变量”-“新建“</p><p><img src="http://p6wzlnrcf.bkt.clouddn.com/path-1.jpg" alt="image"></p><p>我们就是在这里告诉它”门牌号“是多少多少</p><p>首先 我们的小Java刚来到这个陌生 世界，又需要让它把这里当做一个 温馨的家 我们就需要在这里给他做一个小窝啦。</p><p>所以我们需要告诉电脑：那个谁谁谁，现在在什么什么地方蹲着。它现在那个位置，以后就是它的家了。你按照我说的去做！！！</p><p>步骤：单击新建</p><p><img src="http://p6wzlnrcf.bkt.clouddn.com/path-2.jpg" alt="image"> </p><p>变量名：就是我们给Java 的小窝取的名字</p><p>变量值：就是它蹲的地方（就是你安装jdk的路径），注意只需要具体到它的蹲在什么位置. 不需要具体到它多重、多高、穿什么鞋子之类的（又不是查户口，问这么细干嘛：）</p><p><img src="http://p6wzlnrcf.bkt.clouddn.com/path-3.jpg" alt="image"> </p><p>单击确定，Java的小窝就做好啦：）  //是不是有点太草率了？？</p><p>然后 我们就需要给它到公安局录入它的身份。//毕竟是黑户口嘛</p><p><img src="http://p6wzlnrcf.bkt.clouddn.com/path-4.jpg" alt="image"> </p><p>在系统变量中下拉，找到 PATH</p><p><img src="http://p6wzlnrcf.bkt.clouddn.com/path-5.jpg" alt="image"></p><p>注意在这里面的数据，相当于你电脑里面 ” 所有系统软件” 的户口。小手千万别抖：）因为一不小心你电脑中的系统软件就全部变成黑户口了。</p><p>%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin</p><p>上面这一行代码相信你如果有用心看我上面辛辛苦苦码的字，就应该知道 %JAVA_HOME% 就是我们刚才给小Java 建的小窝。至于为什么加两个百分号呢？为什么为什么？毕竟叫做小窝嘛，有两个百分号过分了？</p><p>说正经的，这两个百分号有引用的意思，表示将引用 名字为”JAVA_HOME”环境变量中的值。简单点说，用 JAVA_HOME 这串代码代替了它其中的变量值。</p><p><img src="http://p6wzlnrcf.bkt.clouddn.com/path-6.jpg" alt="image"></p><p>相当于我们为 上图中所标识 的地址 取了一个别名叫做 JAVA_HOME，方便我们使用与记忆。而且既然是别名 那为什么要叫做JAVA_HOME 也不是为了洋气。</p><p>目的是为了”见名知意”</p><p>%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin</p><p>%JAVA_HOME%\bin;</p><p>%JAVA_HOME%\jre\bin;</p><p>上面的路径中存放的则是小Java的具体信息，比如：身高，体重，三围。</p><p>对的，公安局才是查户口的。</p><p>可以打开jdk的安装目录，你可以看到bin目录还有jre目录与jre目录下有一个bin目录。</p><p>做到这里 环境变量还差一步就搭建好了。</p><p><img src="http://p6wzlnrcf.bkt.clouddn.com/path-7.jpg" alt="image"> </p><p>我们需要最后建立一个名为：ClassPath 的系统环境变量，下面那一行的路径可以看作是小Java为我们做事时需要使用的工具。</p><p>它们分别是 tools.jar、dt.jar</p><p>可以在jdk的安装路径中找到这两个文件。注意：这个环境变量有点特殊，细心的同学可以发现在变量值中路径值的前面还有两个英文的符号 .; 记得要加上哦：）</p><pre><code>耐得住寂寞，才能享受繁华。开源改变世界，分享成就梦想转载注明公众号出处</code></pre><p>【本文由“讲编程账号”发布，2017年11月25日】</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;http://p6wzlnrcf.bkt.clouddn.com/wallhaven-638074.jpg&quot; alt=&quot;image&quot;&gt;&lt;/p&gt;
+&lt;p&gt;正所谓欲行其事，必利其器。学习Java也是这个道理。首先学习Java之前我们需要为Java搭建环境变量。大家可以把Java看成是一个需要细心呵护的孩子，在它来到一个陌生的世界时.&lt;/p&gt;
+&lt;p&gt;我们需要告诉它，它的家在哪里，门牌号是多少。出去玩的时候，它需要搭哪一辆公交车才能回到家。怎么样才不会迷路。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="java" scheme="http://cssmini.com/categories/java/"/>
+    
+    
+      <category term="java" scheme="http://cssmini.com/tags/java/"/>
+    
+      <category term="环境变量" scheme="http://cssmini.com/tags/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/"/>
+    
+      <category term="PATH" scheme="http://cssmini.com/tags/PATH/"/>
+    
+      <category term="教学" scheme="http://cssmini.com/tags/%E6%95%99%E5%AD%A6/"/>
+    
+      <category term="千里之行" scheme="http://cssmini.com/tags/%E5%8D%83%E9%87%8C%E4%B9%8B%E8%A1%8C/"/>
+    
+  </entry>
+  
+  <entry>
     <title>编程入门</title>
     <link href="http://cssmini.com/2017/11/04/%E7%BC%96%E7%A8%8B%E5%85%A5%E9%97%A8/"/>
     <id>http://cssmini.com/2017/11/04/编程入门/</id>
@@ -313,38 +345,6 @@
       <category term="编程" scheme="http://cssmini.com/tags/%E7%BC%96%E7%A8%8B/"/>
     
       <category term="C" scheme="http://cssmini.com/tags/C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>千里之行--Java环境变量配置</title>
-    <link href="http://cssmini.com/2017/05/11/%E5%8D%83%E9%87%8C%E4%B9%8B%E8%A1%8C-Java%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE/"/>
-    <id>http://cssmini.com/2017/05/11/千里之行-Java环境变量配置/</id>
-    <published>2017-05-11T09:10:28.000Z</published>
-    <updated>2018-06-22T03:43:44.715Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="http://p6wzlnrcf.bkt.clouddn.com/wallhaven-638074.jpg" alt="image"></p><p>正所谓欲行其事，必利其器。学习Java也是这个道理。首先学习Java之前我们需要为Java搭建环境变量。大家可以把Java看成是一个需要细心呵护的孩子，在它来到一个陌生的世界时.</p><p>我们需要告诉它，它的家在哪里，门牌号是多少。出去玩的时候，它需要搭哪一辆公交车才能回到家。怎么样才不会迷路。</p><a id="more"></a><p>环境变量就是我们告诉它”地址“的地方。而Java它是一个非常聪明的孩子（不然我们也不会靠这个来吃饭对吧：） ，只需要你告诉它一遍就能够记住。刚刚上面所说的陌生世界就是电脑中的系统啦。</p><p>首先第一步我们需要告诉它</p><p>“它的家在哪里”</p><p>右键桌面上的“计算机图标”-“属性”-“高级系统设置”-“高级”-右下角有一个“环境变量”-“新建“</p><p><img src="http://p6wzlnrcf.bkt.clouddn.com/path-1.jpg" alt="image"></p><p>我们就是在这里告诉它”门牌号“是多少多少</p><p>首先 我们的小Java刚来到这个陌生 世界，又需要让它把这里当做一个 温馨的家 我们就需要在这里给他做一个小窝啦。</p><p>所以我们需要告诉电脑：那个谁谁谁，现在在什么什么地方蹲着。它现在那个位置，以后就是它的家了。你按照我说的去做！！！</p><p>步骤：单击新建</p><p><img src="http://p6wzlnrcf.bkt.clouddn.com/path-2.jpg" alt="image"> </p><p>变量名：就是我们给Java 的小窝取的名字</p><p>变量值：就是它蹲的地方（就是你安装jdk的路径），注意只需要具体到它的蹲在什么位置. 不需要具体到它多重、多高、穿什么鞋子之类的（又不是查户口，问这么细干嘛：）</p><p><img src="http://p6wzlnrcf.bkt.clouddn.com/path-3.jpg" alt="image"> </p><p>单击确定，Java的小窝就做好啦：）  //是不是有点太草率了？？</p><p>然后 我们就需要给它到公安局录入它的身份。//毕竟是黑户口嘛</p><p><img src="http://p6wzlnrcf.bkt.clouddn.com/path-4.jpg" alt="image"> </p><p>在系统变量中下拉，找到 PATH</p><p><img src="http://p6wzlnrcf.bkt.clouddn.com/path-5.jpg" alt="image"></p><p>注意在这里面的数据，相当于你电脑里面 ” 所有系统软件” 的户口。小手千万别抖：）因为一不小心你电脑中的系统软件就全部变成黑户口了。</p><p>%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin</p><p>上面这一行代码相信你如果有用心看我上面辛辛苦苦码的字，就应该知道 %JAVA_HOME% 就是我们刚才给小Java 建的小窝。至于为什么加两个百分号呢？为什么为什么？毕竟叫做小窝嘛，有两个百分号过分了？</p><p>说正经的，这两个百分号有引用的意思，表示将引用 名字为”JAVA_HOME”环境变量中的值。简单点说，用 JAVA_HOME 这串代码代替了它其中的变量值。</p><p><img src="http://p6wzlnrcf.bkt.clouddn.com/path-6.jpg" alt="image"></p><p>相当于我们为 上图中所标识 的地址 取了一个别名叫做 JAVA_HOME，方便我们使用与记忆。而且既然是别名 那为什么要叫做JAVA_HOME 也不是为了洋气。</p><p>目的是为了”见名知意”</p><p>%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin</p><p>%JAVA_HOME%\bin;</p><p>%JAVA_HOME%\jre\bin;</p><p>上面的路径中存放的则是小Java的具体信息，比如：身高，体重，三围。</p><p>对的，公安局才是查户口的。</p><p>可以打开jdk的安装目录，你可以看到bin目录还有jre目录与jre目录下有一个bin目录。</p><p>做到这里 环境变量还差一步就搭建好了。</p><p><img src="http://p6wzlnrcf.bkt.clouddn.com/path-7.jpg" alt="image"> </p><p>我们需要最后建立一个名为：ClassPath 的系统环境变量，下面那一行的路径可以看作是小Java为我们做事时需要使用的工具。</p><p>它们分别是 tools.jar、dt.jar</p><p>可以在jdk的安装路径中找到这两个文件。注意：这个环境变量有点特殊，细心的同学可以发现在变量值中路径值的前面还有两个英文的符号 .; 记得要加上哦：）</p><pre><code>耐得住寂寞，才能享受繁华。开源改变世界，分享成就梦想转载注明公众号出处</code></pre><p>【本文由“讲编程账号”发布，2017年11月25日】</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;http://p6wzlnrcf.bkt.clouddn.com/wallhaven-638074.jpg&quot; alt=&quot;image&quot;&gt;&lt;/p&gt;
-&lt;p&gt;正所谓欲行其事，必利其器。学习Java也是这个道理。首先学习Java之前我们需要为Java搭建环境变量。大家可以把Java看成是一个需要细心呵护的孩子，在它来到一个陌生的世界时.&lt;/p&gt;
-&lt;p&gt;我们需要告诉它，它的家在哪里，门牌号是多少。出去玩的时候，它需要搭哪一辆公交车才能回到家。怎么样才不会迷路。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="java" scheme="http://cssmini.com/categories/java/"/>
-    
-    
-      <category term="java" scheme="http://cssmini.com/tags/java/"/>
-    
-      <category term="环境变量" scheme="http://cssmini.com/tags/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/"/>
-    
-      <category term="PATH" scheme="http://cssmini.com/tags/PATH/"/>
-    
-      <category term="教学" scheme="http://cssmini.com/tags/%E6%95%99%E5%AD%A6/"/>
-    
-      <category term="千里之行" scheme="http://cssmini.com/tags/%E5%8D%83%E9%87%8C%E4%B9%8B%E8%A1%8C/"/>
     
   </entry>
   
