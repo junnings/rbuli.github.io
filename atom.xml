@@ -198,35 +198,6 @@
   </entry>
   
   <entry>
-    <title>对于框架的理解</title>
-    <link href="http://cssmini.com/2018/01/09/mybatis/"/>
-    <id>http://cssmini.com/2018/01/09/mybatis/</id>
-    <published>2018-01-09T12:55:37.000Z</published>
-    <updated>2018-06-22T06:44:31.172Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="http://p6wzlnrcf.bkt.clouddn.com/bolg-message-backgrund.jpg" alt="image"></p><h1 id="框架技术"><a href="#框架技术" class="headerlink" title="框架技术"></a>框架技术</h1><h2 id="什么是框架："><a href="#什么是框架：" class="headerlink" title="什么是框架："></a>什么是框架：</h2><p>客观解释：</p><blockquote><p>框架（Framework）框架这个词最早出现在建筑领域，指的是在建造房屋前期构建的建筑骨架。对于我们所开发的程序来说，“框架”就是我们程序的骨架。通过框架可以使程序开发变得简单且利于维护，使混乱的东西变得有序。++框架的强大之处不是源自它能让你做什么，而是它不能让你做什么！++<br><a id="more"></a><br>个人理解：<br>懒是人类进步的原始动力，车子是、taobao是、框架也是。框架就是让我们站在前辈的肩膀上把偷懒的精神发扬光大。（懒为褒义）</p></blockquote><p>总的来说：</p><blockquote><p>一千个人眼中有一千个哈姆雷特，每一个程序员都有不同的代码风格。框架则将程序员的代码风格强制要求为某一种统一的规范。提高代码的可读性、降低后期的维护成本。</p></blockquote><h1 id="Mybatis框架"><a href="#Mybatis框架" class="headerlink" title="Mybatis框架"></a>Mybatis框架</h1><h2 id="Mybatis框架简介-amp-amp-ORM"><a href="#Mybatis框架简介-amp-amp-ORM" class="headerlink" title="Mybatis框架简介 &amp;&amp; ORM"></a>Mybatis框架简介 &amp;&amp; ORM</h2><h3 id="Mybatis框架简介"><a href="#Mybatis框架简介" class="headerlink" title="Mybatis框架简介"></a>Mybatis框架简介</h3><p>MyBatis是一个开源的数据持久层框架。它内部封装了通过JDBC访问数据库的操作，支持普通的SQL查询、存储过程和高级映射，几乎消除了所有的JDBC代码和参数的手工设置以及结果集的检索。MyBatis作为持久层框架。思想上是将程序中的大量SQL语句剥离出来，配置在配置文件中，实现SQL的灵活配置，这样做的好处是将SQL与程序代码分离，可以在不修改程序代码的情况下，直接在配置文件中修改SQL。</p><p><a href="https://mybatis.org" target="_blank" rel="noopener">MyBatis官网 (科学访问)</a></p><p><a href="https://github.com/mybatis" target="_blank" rel="noopener">Github</a></p><h3 id="ORM"><a href="#ORM" class="headerlink" title="ORM"></a>ORM</h3><p>ORM (Object/Relational Mapping) ：</p><blockquote><p>对象/关系映射，是一种数据持久化技术。它在对象模型和关系型数据库之间建立起对应关系，并且提供一种机制，通过JavaBean对象去操作数据库表中的数据.</p></blockquote>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;http://p6wzlnrcf.bkt.clouddn.com/bolg-message-backgrund.jpg&quot; alt=&quot;image&quot;&gt;&lt;/p&gt;
-&lt;h1 id=&quot;框架技术&quot;&gt;&lt;a href=&quot;#框架技术&quot; class=&quot;headerlink&quot; title=&quot;框架技术&quot;&gt;&lt;/a&gt;框架技术&lt;/h1&gt;&lt;h2 id=&quot;什么是框架：&quot;&gt;&lt;a href=&quot;#什么是框架：&quot; class=&quot;headerlink&quot; title=&quot;什么是框架：&quot;&gt;&lt;/a&gt;什么是框架：&lt;/h2&gt;&lt;p&gt;客观解释：&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;框架（Framework）框架这个词最早出现在建筑领域，指的是在建造房屋前期构建的建筑骨架。对于我们所开发的程序来说，“框架”就是我们程序的骨架。通过框架可以使程序开发变得简单且利于维护，使混乱的东西变得有序。++框架的强大之处不是源自它能让你做什么，而是它不能让你做什么！++&lt;br&gt;
-    
-    </summary>
-    
-      <category term="随笔" scheme="http://cssmini.com/categories/%E9%9A%8F%E7%AC%94/"/>
-    
-    
-      <category term="java" scheme="http://cssmini.com/tags/java/"/>
-    
-      <category term="web" scheme="http://cssmini.com/tags/web/"/>
-    
-      <category term="framework" scheme="http://cssmini.com/tags/framework/"/>
-    
-  </entry>
-  
-  <entry>
     <title>对人工智能的一些思考</title>
     <link href="http://cssmini.com/2017/12/01/%C2%96%C2%96%E5%AF%B9%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%9A%84%E4%B8%80%E4%BA%9B%E6%80%9D%E8%80%83/"/>
     <id>http://cssmini.com/2017/12/01/对人工智能的一些思考/</id>
