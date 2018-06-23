@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="日常," />
 
 
 
@@ -81,19 +81,29 @@
 
 
 
-<meta name="description" content="&amp;emsp;&amp;emsp;单例模式，顾名思义就是程序在运行的过程中，有且只有一个实例。它必须满足三个关键点。 &amp;emsp;&amp;emsp;1）一个类只有一个实例。这是满足单例模式最基本的要求，若要满足这个关键点，只能提供私有的构造器，即保证不能随意创建该类的实例。">
+<meta name="description" content="&amp;emsp;&amp;emsp;碰到这个问题的前因是我的博客挂载在github上面，但是由于工作原因导致博客SEO被搁置了有一段时间。 &amp;emsp;&amp;emsp;碰到这个问题的时候，原以为是dns解析的问题，因为github上面不允许爬虫去爬连接，所以博客是同时还挂载了一份在coding上面的。也就是说当国外访问时，我设置的是将地址解析到github上面，而国内访问时，是解析至coding上面的（如下图所">
+<meta name="keywords" content="日常">
 <meta property="og:type" content="article">
-<meta property="og:title" content="什么是单例模式">
-<meta property="og:url" content="http://cssmini.com/2018/05/16/什么是单例模式/index.html">
+<meta property="og:title" content="Hexo 搭建博客提交百度 sitemap 抓取失败">
+<meta property="og:url" content="http://cssmini.com/2018/06/11/Hexo-搭建博客提交百度-sitemap-抓取失败/index.html">
 <meta property="og:site_name" content="rbuli&#39;s Notes">
-<meta property="og:description" content="&amp;emsp;&amp;emsp;单例模式，顾名思义就是程序在运行的过程中，有且只有一个实例。它必须满足三个关键点。 &amp;emsp;&amp;emsp;1）一个类只有一个实例。这是满足单例模式最基本的要求，若要满足这个关键点，只能提供私有的构造器，即保证不能随意创建该类的实例。">
+<meta property="og:description" content="&amp;emsp;&amp;emsp;碰到这个问题的前因是我的博客挂载在github上面，但是由于工作原因导致博客SEO被搁置了有一段时间。 &amp;emsp;&amp;emsp;碰到这个问题的时候，原以为是dns解析的问题，因为github上面不允许爬虫去爬连接，所以博客是同时还挂载了一份在coding上面的。也就是说当国外访问时，我设置的是将地址解析到github上面，而国内访问时，是解析至coding上面的（如下图所">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://p6wzlnrcf.bkt.clouddn.com/%E5%A4%8F%E7%9B%AE%E5%8F%8B%E4%BA%BA%E5%B8%90asdasdasdasd.gif">
-<meta property="og:updated_time" content="2018-06-22T03:46:21.859Z">
+<meta property="og:image" content="http://p6wzlnrcf.bkt.clouddn.com//blogimg/567988.jpg">
+<meta property="og:image" content="http://p6wzlnrcf.bkt.clouddn.com//bolgword/kjdghjfdgjndf.png">
+<meta property="og:image" content="http://p6wzlnrcf.bkt.clouddn.com//bolgword/asdfhgadfgagasfgrg.png">
+<meta property="og:image" content="http://p6wzlnrcf.bkt.clouddn.com//bolgword/asdgfasdgasgwregqwre.png">
+<meta property="og:image" content="http://p6wzlnrcf.bkt.clouddn.com//bolgword/qerygergasdgasdf.png">
+<meta property="og:image" content="http://p6wzlnrcf.bkt.clouddn.com/heqrhqergsaffgasdg.png">
+<meta property="og:image" content="http://p6wzlnrcf.bkt.clouddn.com/asdfhasfgasfgasg.png">
+<meta property="og:image" content="http://p6wzlnrcf.bkt.clouddn.com//bolgword/asfdghasfgasdgfsadfasdf.png">
+<meta property="og:image" content="http://p6wzlnrcf.bkt.clouddn.com/afdsgasdgsadfasdfsad.png">
+<meta property="og:image" content="http://p6wzlnrcf.bkt.clouddn.com//bolgword/agaerveasdvasd.png">
+<meta property="og:updated_time" content="2018-06-23T11:34:36.222Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="什么是单例模式">
-<meta name="twitter:description" content="&amp;emsp;&amp;emsp;单例模式，顾名思义就是程序在运行的过程中，有且只有一个实例。它必须满足三个关键点。 &amp;emsp;&amp;emsp;1）一个类只有一个实例。这是满足单例模式最基本的要求，若要满足这个关键点，只能提供私有的构造器，即保证不能随意创建该类的实例。">
-<meta name="twitter:image" content="http://p6wzlnrcf.bkt.clouddn.com/%E5%A4%8F%E7%9B%AE%E5%8F%8B%E4%BA%BA%E5%B8%90asdasdasdasd.gif">
+<meta name="twitter:title" content="Hexo 搭建博客提交百度 sitemap 抓取失败">
+<meta name="twitter:description" content="&amp;emsp;&amp;emsp;碰到这个问题的前因是我的博客挂载在github上面，但是由于工作原因导致博客SEO被搁置了有一段时间。 &amp;emsp;&amp;emsp;碰到这个问题的时候，原以为是dns解析的问题，因为github上面不允许爬虫去爬连接，所以博客是同时还挂载了一份在coding上面的。也就是说当国外访问时，我设置的是将地址解析到github上面，而国内访问时，是解析至coding上面的（如下图所">
+<meta name="twitter:image" content="http://p6wzlnrcf.bkt.clouddn.com//blogimg/567988.jpg">
 
 
 
@@ -122,13 +132,13 @@
 </script>
 
 
-  <link rel="canonical" href="http://cssmini.com/2018/05/16/什么是单例模式/"/>
+  <link rel="canonical" href="http://cssmini.com/2018/06/11/Hexo-搭建博客提交百度-sitemap-抓取失败/"/>
 
 
 
 
 
-  <title>什么是单例模式 | rbuli's Notes</title>
+  <title>Hexo 搭建博客提交百度 sitemap 抓取失败 | rbuli's Notes</title>
   
 
 
@@ -299,7 +309,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://cssmini.com/2018/05/16/什么是单例模式/">
+    <link itemprop="mainEntityOfPage" href="http://cssmini.com/2018/06/11/Hexo-搭建博客提交百度-sitemap-抓取失败/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="rbuli">
@@ -316,7 +326,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">什么是单例模式</h2>
+          <h2 class="post-title" itemprop="name headline">Hexo 搭建博客提交百度 sitemap 抓取失败</h2>
         
 
         <div class="post-meta">
@@ -328,8 +338,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-16T22:13:06+08:00">
-                2018-05-16
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-11T13:32:20+08:00">
+                2018-06-11
               </time>
             
 
@@ -338,6 +348,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/日常修BUG记录/" itemprop="url" rel="index">
+                    <span itemprop="name">日常修BUG记录</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -365,7 +397,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  848
+                  651
                 </span>
               
 
@@ -381,7 +413,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  4
+                  2
                 </span>
               
             </div>
@@ -402,17 +434,67 @@
       
 
       
-        <p><img src="http://p6wzlnrcf.bkt.clouddn.com/%E5%A4%8F%E7%9B%AE%E5%8F%8B%E4%BA%BA%E5%B8%90asdasdasdasd.gif" alt="image"></p>
-<p>&emsp;&emsp;单例模式，顾名思义就是程序在运行的过程中，有且只有一个实例。它必须满足三个关键点。</p>
-<p>&emsp;&emsp;1）一个类只有一个实例。这是满足单例模式最基本的要求，若要满足这个关键点，只能提供私有的构造器，即保证不能随意创建该类的实例。<br><a id="more"></a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">public class ConfigManager &#123;</span><br><span class="line">	private static ConfigManager configManager;</span><br><span class="line">	//私有构造器-读取数据库配置文件</span><br><span class="line">	private ConfigManager()&#123;</span><br><span class="line">		String configFile = &quot;database.properties&quot;;</span><br><span class="line">		properties = new Properties();</span><br><span class="line">		InputStream is = </span><br><span class="line">				ConfigManager.class.getClassLoader().getResourceAsStream(configFile);</span><br><span class="line">		try &#123;</span><br><span class="line">			properties.load(is);</span><br><span class="line">			is.close();</span><br><span class="line">		&#125; catch (IOException e) &#123;</span><br><span class="line">			// TODO Auto-generated catch block</span><br><span class="line">			e.printStackTrace();</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>&emsp;&emsp;在上述代码中，我们把读取配置文件的I/O操作代码放入私有构造器里，这样可以有效地保证I/O操作在整个系统运行期间仅被执行一次，以解决资源消耗问题。</p>
-<p>&emsp;&emsp;2）它必须自行创建这个实例。对于这一点，正是体现了：单例模式的“有且仅有一个实例”的这一特性。我们要保证唯一性，也就意味着必须要提供一个实例，那么就需要它自行创建，定义一个ConfigManager类型的静态的私有对象，以便向外界提供该类实例时使用。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">//读取配置文件的工具类-单例模式</span><br><span class="line">public class ConfigManager &#123;</span><br><span class="line">	private static ConfigManager configManager;</span><br><span class="line">	private static Properties properties;</span><br><span class="line">	//私有构造器-读取数据库配置文件</span><br><span class="line">	private ConfigManager()&#123;</span><br><span class="line">		String configFile = &quot;database.properties&quot;;</span><br><span class="line">		properties = new Properties();</span><br><span class="line">		InputStream is = </span><br><span class="line">				ConfigManager.class.getClassLoader().getResourceAsStream(configFile);</span><br><span class="line">		try &#123;</span><br><span class="line">			properties.load(is);</span><br><span class="line">			is.close();</span><br><span class="line">		&#125; catch (IOException e) &#123;</span><br><span class="line">			// TODO Auto-generated catch block</span><br><span class="line">			e.printStackTrace();</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>&emsp;&emsp;在上面的代码中，我们定义了一个ConfigManager的静态私有对象configManager。</p>
-<p>&emsp;&emsp;3）它必须自行向整个系统提供这个实例。最后一点也是至关重要的，外界需要获取并使用这个单例类的实例，但是由于该类的构造器是私有的，外界无法通过new去获取它的实例，那么就必须提供一个静态的公有方法，该方法创建或者获取它本身的静态私有对象并返回。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">//读取配置文件的工具类-单例模式</span><br><span class="line">public class ConfigManager &#123;</span><br><span class="line">	private static ConfigManager configManager;</span><br><span class="line">	private static Properties properties;</span><br><span class="line">	//私有构造器-读取数据库配置文件</span><br><span class="line">	private ConfigManager()&#123;</span><br><span class="line">		String configFile = &quot;database.properties&quot;;</span><br><span class="line">		properties = new Properties();</span><br><span class="line">		InputStream is = </span><br><span class="line">				ConfigManager.class.getClassLoader().getResourceAsStream(configFile);</span><br><span class="line">		try &#123;</span><br><span class="line">			properties.load(is);</span><br><span class="line">			is.close();</span><br><span class="line">		&#125; catch (IOException e) &#123;</span><br><span class="line">			// TODO Auto-generated catch block</span><br><span class="line">			e.printStackTrace();</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	//全局访问点</span><br><span class="line">	public static ConfigManager getInstance()&#123;</span><br><span class="line">		if(configManager == null)&#123;</span><br><span class="line">			configManager = new ConfigManager();</span><br><span class="line">		&#125;</span><br><span class="line">		return configManager;</span><br><span class="line">	&#125;</span><br><span class="line">	//根据传入的key获取相应的value值</span><br><span class="line">	public String getValue(String key)&#123;</span><br><span class="line">		return properties.getProperty(key);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>&emsp;&emsp;在上面的代码中，我们添加了一个全局的访问点getInstance()方法，该方法返回该类的实例，以被外界使用。在该方法体内，进行了简单的逻辑判断，若configManager为null，那么创建该实例；若不为空，那么直接返回configManager实例即可，不需要再实例化该类的对象。</p>
-<p>&emsp;&emsp;为什么要将getInstance（）方法定位为static呢？</p>
-<p>&emsp;&emsp;因为作为该单例类的全局访问点，外界需要哦调用该方法来获取configManager方法，则该方法必须也是静态的，否则无法调用。</p>
+        <p><img src="http://p6wzlnrcf.bkt.clouddn.com//blogimg/567988.jpg" alt="image"></p>
+<p>&emsp;&emsp;碰到这个问题的前因是我的博客挂载在github上面，但是由于工作原因导致博客SEO被搁置了有一段时间。</p>
+<p>&emsp;&emsp;碰到这个问题的时候，原以为是dns解析的问题，因为github上面不允许爬虫去爬连接，所以博客是同时还挂载了一份在coding上面的。也就是说当国外访问时，我设置的是将地址解析到github上面，而国内访问时，是解析至coding上面的（如下图所示）。</p>
+<a id="more"></a>
+<p><img src="http://p6wzlnrcf.bkt.clouddn.com//bolgword/kjdghjfdgjndf.png" alt="image"></p>
+<p>&emsp;&emsp;遂重新配置，期间盯着每一个字母，确认完全没有错误后排除这猜测。</p>
+<p>&emsp;&emsp;转念又想是不是sitemap文件出了问题呢？</p>
+<p>&emsp;&emsp;直接输入sitemap路径访问，也排除了这一可能。</p>
+<p><img src="http://p6wzlnrcf.bkt.clouddn.com//bolgword/asdfhgadfgagasfgrg.png" alt="image"></p>
+<p>&emsp;&emsp;在图中可以看到，sitemap是可以正常被访问的。</p>
+<p>&emsp;&emsp;无解，打开百度抓取诊断测试了一波。</p>
+<p>&emsp;&emsp;发现了这样一个现象：</p>
+<p><img src="http://p6wzlnrcf.bkt.clouddn.com//bolgword/asdgfasdgasgwregqwre.png" alt="image"></p>
+<p>&emsp;&emsp;移动端是可以抓取到的，但是pc端却抓取失败（牛皮），跳转可以理解，但是为什么移动端抓取成功，但PC却不行呢？</p>
+<p>&emsp;&emsp;百思不得其解，最后做出结论：百度又抽风了。</p>
+<p>&emsp;&emsp;点击【抓取详情】</p>
+<p><img src="http://p6wzlnrcf.bkt.clouddn.com//bolgword/qerygergasdgasdf.png" alt="image"></p>
+<p>&emsp;&emsp;发现IP是185开头的，突然灵光一闪：会不会是跳转出了问题呢？会不会是原本应该爬取coding上面的blog却爬到github上面去了呢(上面说过，github禁止了百度爬虫去爬连接)？</p>
+<p>&emsp;&emsp;刹那间仿佛柯南附体，在脑海中自动脑补出破案时播放的BGM，手中win+r组合键瞬间按下，飞快的打开cmd，输入：</p>
+<blockquote>
+<p>ping rbuli.github.io </p>
+</blockquote>
+<p><img src="http://p6wzlnrcf.bkt.clouddn.com/heqrhqergsaffgasdg.png" alt="image"></p>
+<p>&emsp;&emsp;简直不敢相信我的双眼，于是我再次测了一遍。</p>
+<p>&emsp;&emsp;破案！</p>
+<p><img src="http://p6wzlnrcf.bkt.clouddn.com/asdfhasfgasfgasg.png" alt="image"></p>
+<p>&emsp;&emsp;刚刚说过，dns解析是绝对不存在问题的（我表示对我5.1视力很有信心）</p>
+<p>&emsp;&emsp;也证明了我看似随意的结论：百度又抽风了</p>
+<p>&emsp;&emsp;为了结论的严谨性，为确保万一我把指向github的解析删除后再测试了一遍（甚至专门添上了百度访问的解析）：</p>
+<p><img src="http://p6wzlnrcf.bkt.clouddn.com//bolgword/asfdghasfgasdgfsadfasdf.png" alt="image"></p>
+<p>&emsp;&emsp;再测一遍（此处你应该可以感受到，我对这个结论同样存在一丝丝怀疑）。</p>
+<p><img src="http://p6wzlnrcf.bkt.clouddn.com/afdsgasdgsadfasdfsad.png" alt="image"></p>
+<p>&emsp;&emsp;/愣住</p>
+<p>&emsp;&emsp;自己默默的点了首凉凉，表达此刻伤感的心情。</p>
+<h3 id="解决方案："><a href="#解决方案：" class="headerlink" title="解决方案："></a>解决方案：</h3><p><img src="http://p6wzlnrcf.bkt.clouddn.com//bolgword/agaerveasdvasd.png" alt="image"></p>
+<p>&emsp;&emsp;点击报错，提交反馈。（还能怎么办，我也很绝望）</p>
+<blockquote>
+<p>P.S：如果你是从百度上面搜索到了此篇文章且域名为（cssmini.com），说明我的问题已经解决😊</p>
+</blockquote>
+<p><strong><em>同时送给搜到这篇文章的你一首凉凉：</em></strong></p>
+<html><br><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=480579211&auto=0&height=66"></iframe><br></html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
       
     </div>
@@ -433,7 +515,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://cssmini.com/2018/05/16/什么是单例模式/" title="什么是单例模式">http://cssmini.com/2018/05/16/什么是单例模式/</a>
+    <a href="http://cssmini.com/2018/06/11/Hexo-搭建博客提交百度-sitemap-抓取失败/" title="Hexo 搭建博客提交百度 sitemap 抓取失败">http://cssmini.com/2018/06/11/Hexo-搭建博客提交百度-sitemap-抓取失败/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -445,6 +527,12 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/日常/" rel="tag"><i class="fa fa-tag"></i> 日常</a>
+          
+        </div>
       
 
       
@@ -470,8 +558,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/05/14/胡思乱想/" rel="next" title="胡思乱想">
-                <i class="fa fa-chevron-left"></i> 胡思乱想
+              <a href="/2018/05/26/快速掌握一门新的编程语言/" rel="next" title="快速掌握一门新的编程语言">
+                <i class="fa fa-chevron-left"></i> 快速掌握一门新的编程语言
               </a>
             
           </div>
@@ -480,8 +568,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/05/26/快速掌握一门新的编程语言/" rel="prev" title="快速掌握一门新的编程语言">
-                快速掌握一门新的编程语言 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/06/20/vue开发环境搭建/" rel="prev" title="vue开发环境搭建">
+                vue开发环境搭建 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -534,8 +622,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -640,6 +737,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#解决方案："><span class="nav-number">1.</span> <span class="nav-text">解决方案：</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

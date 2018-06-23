@@ -77,6 +77,30 @@
   </entry>
   
   <entry>
+    <title>Hexo 搭建博客提交百度 sitemap 抓取失败</title>
+    <link href="http://cssmini.com/2018/06/11/Hexo-%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E6%8F%90%E4%BA%A4%E7%99%BE%E5%BA%A6-sitemap-%E6%8A%93%E5%8F%96%E5%A4%B1%E8%B4%A5/"/>
+    <id>http://cssmini.com/2018/06/11/Hexo-搭建博客提交百度-sitemap-抓取失败/</id>
+    <published>2018-06-11T05:32:20.000Z</published>
+    <updated>2018-06-23T11:34:36.222Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="http://p6wzlnrcf.bkt.clouddn.com//blogimg/567988.jpg" alt="image"></p><p>&emsp;&emsp;碰到这个问题的前因是我的博客挂载在github上面，但是由于工作原因导致博客SEO被搁置了有一段时间。</p><p>&emsp;&emsp;碰到这个问题的时候，原以为是dns解析的问题，因为github上面不允许爬虫去爬连接，所以博客是同时还挂载了一份在coding上面的。也就是说当国外访问时，我设置的是将地址解析到github上面，而国内访问时，是解析至coding上面的（如下图所示）。</p><a id="more"></a><p><img src="http://p6wzlnrcf.bkt.clouddn.com//bolgword/kjdghjfdgjndf.png" alt="image"></p><p>&emsp;&emsp;遂重新配置，期间盯着每一个字母，确认完全没有错误后排除这猜测。</p><p>&emsp;&emsp;转念又想是不是sitemap文件出了问题呢？</p><p>&emsp;&emsp;直接输入sitemap路径访问，也排除了这一可能。</p><p><img src="http://p6wzlnrcf.bkt.clouddn.com//bolgword/asdfhgadfgagasfgrg.png" alt="image"></p><p>&emsp;&emsp;在图中可以看到，sitemap是可以正常被访问的。</p><p>&emsp;&emsp;无解，打开百度抓取诊断测试了一波。</p><p>&emsp;&emsp;发现了这样一个现象：</p><p><img src="http://p6wzlnrcf.bkt.clouddn.com//bolgword/asdgfasdgasgwregqwre.png" alt="image"></p><p>&emsp;&emsp;移动端是可以抓取到的，但是pc端却抓取失败（牛皮），跳转可以理解，但是为什么移动端抓取成功，但PC却不行呢？</p><p>&emsp;&emsp;百思不得其解，最后做出结论：百度又抽风了。</p><p>&emsp;&emsp;点击【抓取详情】</p><p><img src="http://p6wzlnrcf.bkt.clouddn.com//bolgword/qerygergasdgasdf.png" alt="image"></p><p>&emsp;&emsp;发现IP是185开头的，突然灵光一闪：会不会是跳转出了问题呢？会不会是原本应该爬取coding上面的blog却爬到github上面去了呢(上面说过，github禁止了百度爬虫去爬连接)？</p><p>&emsp;&emsp;刹那间仿佛柯南附体，在脑海中自动脑补出破案时播放的BGM，手中win+r组合键瞬间按下，飞快的打开cmd，输入：</p><blockquote><p>ping rbuli.github.io </p></blockquote><p><img src="http://p6wzlnrcf.bkt.clouddn.com/heqrhqergsaffgasdg.png" alt="image"></p><p>&emsp;&emsp;简直不敢相信我的双眼，于是我再次测了一遍。</p><p>&emsp;&emsp;破案！</p><p><img src="http://p6wzlnrcf.bkt.clouddn.com/asdfhasfgasfgasg.png" alt="image"></p><p>&emsp;&emsp;刚刚说过，dns解析是绝对不存在问题的（我表示对我5.1视力很有信心）</p><p>&emsp;&emsp;也证明了我看似随意的结论：百度又抽风了</p><p>&emsp;&emsp;为了结论的严谨性，为确保万一我把指向github的解析删除后再测试了一遍（甚至专门添上了百度访问的解析）：</p><p><img src="http://p6wzlnrcf.bkt.clouddn.com//bolgword/asfdghasfgasdgfsadfasdf.png" alt="image"></p><p>&emsp;&emsp;再测一遍（此处你应该可以感受到，我对这个结论同样存在一丝丝怀疑）。</p><p><img src="http://p6wzlnrcf.bkt.clouddn.com/afdsgasdgsadfasdfsad.png" alt="image"></p><p>&emsp;&emsp;/愣住</p><p>&emsp;&emsp;自己默默的点了首凉凉，表达此刻伤感的心情。</p><h3 id="解决方案："><a href="#解决方案：" class="headerlink" title="解决方案："></a>解决方案：</h3><p><img src="http://p6wzlnrcf.bkt.clouddn.com//bolgword/agaerveasdvasd.png" alt="image"></p><p>&emsp;&emsp;点击报错，提交反馈。（还能怎么办，我也很绝望）</p><blockquote><p>P.S：如果你是从百度上面搜索到了此篇文章且域名为（cssmini.com），说明我的问题已经解决😊</p></blockquote><p><strong><em>同时送给搜到这篇文章的你一首凉凉：</em></strong></p><html><br><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=480579211&auto=0&height=66"></iframe><br></html>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;http://p6wzlnrcf.bkt.clouddn.com//blogimg/567988.jpg&quot; alt=&quot;image&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&amp;emsp;&amp;emsp;碰到这个问题的前因是我的博客挂载在github上面，但是由于工作原因导致博客SEO被搁置了有一段时间。&lt;/p&gt;
+&lt;p&gt;&amp;emsp;&amp;emsp;碰到这个问题的时候，原以为是dns解析的问题，因为github上面不允许爬虫去爬连接，所以博客是同时还挂载了一份在coding上面的。也就是说当国外访问时，我设置的是将地址解析到github上面，而国内访问时，是解析至coding上面的（如下图所示）。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="日常修BUG记录" scheme="http://cssmini.com/categories/%E6%97%A5%E5%B8%B8%E4%BF%AEBUG%E8%AE%B0%E5%BD%95/"/>
+    
+    
+      <category term="日常" scheme="http://cssmini.com/tags/%E6%97%A5%E5%B8%B8/"/>
+    
+  </entry>
+  
+  <entry>
     <title>快速掌握一门新的编程语言</title>
     <link href="http://cssmini.com/2018/05/26/%E5%BF%AB%E9%80%9F%E6%8E%8C%E6%8F%A1%E4%B8%80%E9%97%A8%E6%96%B0%E7%9A%84%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
     <id>http://cssmini.com/2018/05/26/快速掌握一门新的编程语言/</id>
@@ -127,9 +151,9 @@
     <link href="http://cssmini.com/2018/05/14/%E8%83%A1%E6%80%9D%E4%B9%B1%E6%83%B3/"/>
     <id>http://cssmini.com/2018/05/14/胡思乱想/</id>
     <published>2018-05-14T14:08:38.000Z</published>
-    <updated>2018-06-22T03:42:30.276Z</updated>
+    <updated>2018-06-23T08:51:56.004Z</updated>
     
-    <content type="html"><![CDATA[<p><img src="http://p6wzlnrcf.bkt.clouddn.com/wallhaven-641206.png" alt="image"></p><h1 id="关于智能手机"><a href="#关于智能手机" class="headerlink" title="关于智能手机"></a>关于智能手机</h1><p>&emsp;&emsp;近些年来智能手机的发展可谓是日新月异，无论是硬件方面来说，还是从软件方面。回想一下，12年、13年的时候，身边的朋友用的都还是带按键的手机，牛皮一点的是传说中的触屏（用指甲使劲戳几下就能选中）手机。功能上也就是打电话，最多带个QQ。总的来说没有跨出手机本身的意义。<a id="more"></a><br>&emsp;&emsp;记得是从13年左右的时候，智能手机出现在了中国大众的手中（依稀记得当时被炒上天的iPhone，一男子割肾只求一台iphone4s）笑，随着智能手机的发展，安卓迎来了一波春天。安卓平台上的app，尽力的满足着基数巨大的国民，只有想不到，没有做不到（毕竟流量即金钱）。微信、淘宝、短视频app、自媒体，从各个角度出发吸引着大众的眼球。触手可得的资讯、宝贵的知识，动动手指即可获得，不！手指都不需要动，即自动送到你的眼下。只求你的片刻停留。<br>&emsp;&emsp;在这样的环境下，产生了各种博人眼球的新兴词汇：知识焦虑、碎片化阅读、知识付费。产生这些词汇背后的本质是什么？获得你的停留，获取流量，继而获利。是的，有一小部分人获利了，根据2/8定律，获利的对象是那八成的大众。<br>&emsp;&emsp;大众是愚昧的，像一位皇帝一样被伺候着，被虚有的信息刺激着大脑多巴胺的分泌，获取着令大脑愉悦的快感。温水煮青蛙。使用虚拟的网络、朋友圈，装饰着虚幻的小我。时间久了变得分不清哪个才是真正的自我。<br>&emsp;&emsp;更加可怕的是这一代的小孩，从小就生活在这样虚无飘渺的世界中。<br>&emsp;&emsp;何以解忧？引用许嵩许多年前的写的歌词</p><blockquote class="blockquote-center"><p>放下客户端，立地成佛 </p></blockquote><h1 id="关于色"><a href="#关于色" class="headerlink" title="关于色"></a>关于色</h1><p>&emsp;&emsp;现中国环境下，随着网络的普及，弃前人之鉴而不顾。完全不知戒色为何物。<br><blockquote class="blockquote-center"><p>子曰：少之时，气血未定，戒之在色。<br>又有前人曰：二八佳人体似酥，腰间仗剑斩愚夫。 </p></blockquote><br>&emsp;&emsp;唾手可及的情色讯息，打开潘多拉盒子的现代中国，年轻一代深受茶毒。殊不知，精为人之本，发之华。<br>&emsp;&emsp;为着短暂的快感，而全然不顾根本。殊不知，所谓的快感，其实是毒药。<br>&emsp;&emsp;食与色，为人之本性。驾驭不了本性之人，与禽兽何异。<br>&emsp;&emsp;当局者迷旁观者清。跳出来，你能看到更美好的世界。</p><h1 id="关于阅读"><a href="#关于阅读" class="headerlink" title="关于阅读"></a>关于阅读</h1><p>&emsp;&emsp;阅读一事，实在有趣。白日清欢无它事，摇椅捧书笑偷闲。多少人迷失在所谓的阅读上面，以为可以寻到宝藏，还是太轻浮了。将心静下来，仔细想想宝藏在哪里？<br>&emsp;&emsp;书有消遣与教材之分（个人看法，欢迎探讨）。<br>&emsp;&emsp;千人千面，在消遣类的书籍中，不同的人都不同的感想和收获。这是强求不来的，有些书，人家说好，但是你读不进去，硬着头皮读下去，你也得不到什么。你选择书，书也在选择你。还不如洒脱的将其丢在一旁。等他日机遇到了自然会想起。<br>&emsp;&emsp;教材类书籍，才是你学习知识的宝贵财富。它讲述的是明确的内容，它所存在的意义就是将作者的知识记载下来，供世人消化、学习。自然，干货的汲取舒适度、速度肯定是不如消遣类书籍来得愉悦、来得迅速。但是这毕竟是实实在在的知识呀。<br>&emsp;&emsp;人天性就是追寻舒适。能掌控自己的人，属于少数。</p><h1 id="关于内心"><a href="#关于内心" class="headerlink" title="关于内心"></a>关于内心</h1><blockquote class="blockquote-center"><p>当局者迷旁观者清</p></blockquote><p>&emsp;&emsp;上面这句话，你真的懂吗？<br>&emsp;&emsp;人是由无数细胞组成的碳基生命体，细胞是新陈代谢的，也就是说，从理论上讲，你从出生到现在，实际上你的身体已经换了好几遍了。你还是你吗？<br>&emsp;&emsp;没错，你还是你，我现在是在和真正的你讲话。我口中的你，是你的思想本身。不用去别处寻找，你就是你。情绪、欲望、邪念都不是真的你。跳出来，你就是不一样的你。身体是客观存在的物体，而你（本我）才是旁观着这一切的旁观者。<br>&emsp;&emsp;嗯，时间不早了，就写到这里吧。</p>]]></content>
+    <content type="html"><![CDATA[<p><img src="http://p6wzlnrcf.bkt.clouddn.com/wallhaven-641206.png" alt="image"></p><h1 id="关于智能手机"><a href="#关于智能手机" class="headerlink" title="关于智能手机"></a>关于智能手机</h1><p>&emsp;&emsp;近些年来智能手机的发展可谓是日新月异，无论是硬件方面来说，还是从软件方面。回想一下，12年、13年的时候，身边的朋友用的都还是带按键的手机，牛皮一点的是传说中的触屏（用指甲使劲戳几下就能选中）手机。功能上也就是打电话，最多带个QQ。总的来说没有跨出手机本身的意义。<a id="more"></a><br>&emsp;&emsp;记得是从13年左右的时候，智能手机出现在了中国大众的手中（依稀记得当时被炒上天的iPhone，一男子割肾只求一台iphone4s）笑，随着智能手机的发展，安卓迎来了一波春天。安卓平台上的app，尽力的满足着基数巨大的国民，只有想不到，没有做不到（毕竟流量即金钱）。微信、淘宝、短视频app、自媒体，从各个角度出发吸引着大众的眼球。触手可得的资讯、宝贵的知识，动动手指即可获得，不！手指都不需要动，即自动送到你的眼下。只求你的片刻停留。<br>&emsp;&emsp;在这样的环境下，产生了各种博人眼球的新兴词汇：知识焦虑、碎片化阅读、知识付费。产生这些词汇背后的本质是什么？获得你的停留，获取流量，继而获利。是的，有一小部分人获利了，根据2/8定律，被获利的对象是那八成的大众。<br>&emsp;&emsp;大众是愚昧的，像一位皇帝一样被伺候着，被虚有的信息刺激着大脑多巴胺的分泌，获取着令大脑愉悦的快感。温水煮青蛙。使用虚拟的网络、朋友圈，装饰着虚幻的小我。时间久了变得分不清哪个才是真正的自我。<br>&emsp;&emsp;更加可怕的是这一代的小孩，从小就生活在这样虚无飘渺的世界中。<br>&emsp;&emsp;何以解忧？引用许嵩许多年前的写的歌词</p><blockquote class="blockquote-center"><p>放下客户端，立地成佛 </p></blockquote><h1 id="关于色"><a href="#关于色" class="headerlink" title="关于色"></a>关于色</h1><p>&emsp;&emsp;现中国环境下，随着网络的普及，弃前人之鉴而不顾。完全不知戒色为何物。<br><blockquote class="blockquote-center"><p>子曰：少之时，气血未定，戒之在色。<br>又有前人曰：二八佳人体似酥，腰间仗剑斩愚夫。 </p></blockquote><br>&emsp;&emsp;唾手可及的情色讯息，打开潘多拉盒子的现代中国，年轻一代深受茶毒。殊不知，精为人之本，发之华。<br>&emsp;&emsp;为着短暂的快感，而全然不顾根本。殊不知，所谓的快感，其实是毒药。<br>&emsp;&emsp;食与色，为人之本性。驾驭不了本性之人，与禽兽何异。<br>&emsp;&emsp;当局者迷旁观者清。跳出来，你能看到更美好的世界。</p><h1 id="关于阅读"><a href="#关于阅读" class="headerlink" title="关于阅读"></a>关于阅读</h1><p>&emsp;&emsp;阅读一事，实在有趣。白日清欢无它事，摇椅捧书笑偷闲。多少人迷失在所谓的阅读上面，以为可以寻到宝藏，还是太轻浮了。将心静下来，仔细想想宝藏在哪里？<br>&emsp;&emsp;书有消遣与教材之分（个人看法，欢迎探讨）。<br>&emsp;&emsp;千人千面，在消遣类的书籍中，不同的人都不同的感想和收获。这是强求不来的，有些书，人家说好，但是你读不进去，硬着头皮读下去，你也得不到什么。你选择书，书也在选择你。还不如洒脱的将其丢在一旁。等他日机遇到了自然会想起。<br>&emsp;&emsp;教材类书籍，才是你学习知识的宝贵财富。它讲述的是明确的内容，它所存在的意义就是将作者的知识记载下来，供世人消化、学习。自然，干货的汲取舒适度、速度肯定是不如消遣类书籍来得愉悦、来得迅速。但是这毕竟是实实在在的知识呀。<br>&emsp;&emsp;人天性就是追寻舒适。能掌控自己的人，属于少数。</p><h1 id="关于内心"><a href="#关于内心" class="headerlink" title="关于内心"></a>关于内心</h1><blockquote class="blockquote-center"><p>当局者迷旁观者清</p></blockquote><p>&emsp;&emsp;上面这句话，你真的懂吗？<br>&emsp;&emsp;人是由无数细胞组成的碳基生命体，细胞是新陈代谢的，也就是说，从理论上讲，你从出生到现在，实际上你的身体已经换了好几遍了。你还是你吗？<br>&emsp;&emsp;没错，你还是你，我现在是在和真正的你讲话。我口中的你，是你的思想本身。不用去别处寻找，你就是你。情绪、欲望、邪念都不是真的你。跳出来，你就是不一样的你。身体是客观存在的物体，而你（本我）才是旁观着这一切的旁观者。<br>&emsp;&emsp;嗯，时间不早了，就写到这里吧。</p>]]></content>
     
     <summary type="html">
     
@@ -275,13 +299,13 @@
       <category term="java" scheme="http://cssmini.com/categories/java/"/>
     
     
+      <category term="教学" scheme="http://cssmini.com/tags/%E6%95%99%E5%AD%A6/"/>
+    
       <category term="java" scheme="http://cssmini.com/tags/java/"/>
     
       <category term="环境变量" scheme="http://cssmini.com/tags/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/"/>
     
       <category term="PATH" scheme="http://cssmini.com/tags/PATH/"/>
-    
-      <category term="教学" scheme="http://cssmini.com/tags/%E6%95%99%E5%AD%A6/"/>
     
       <category term="千里之行" scheme="http://cssmini.com/tags/%E5%8D%83%E9%87%8C%E4%B9%8B%E8%A1%8C/"/>
     

@@ -1,5 +1,6 @@
 http://cssmini.com/2018/06/20/vue学习笔记/
 http://cssmini.com/2018/06/20/vue开发环境搭建/
+http://cssmini.com/2018/06/11/Hexo-搭建博客提交百度-sitemap-抓取失败/
 http://cssmini.com/2018/05/26/快速掌握一门新的编程语言/
 http://cssmini.com/2018/05/16/什么是单例模式/
 http://cssmini.com/2018/05/14/胡思乱想/
