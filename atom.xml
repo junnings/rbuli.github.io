@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://cssmini.com/"/>
-  <updated>2018-06-22T04:16:03.581Z</updated>
+  <updated>2018-06-26T00:39:56.018Z</updated>
   <id>http://cssmini.com/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Vue学习思路总结</title>
+    <link href="http://cssmini.com/2018/06/26/Vue%E5%AD%A6%E4%B9%A0%E6%80%9D%E8%B7%AF%E6%80%BB%E7%BB%93/"/>
+    <id>http://cssmini.com/2018/06/26/Vue学习思路总结/</id>
+    <published>2018-06-26T00:33:49.000Z</published>
+    <updated>2018-06-26T00:39:56.018Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="http://p6wzlnrcf.bkt.clouddn.com//blogimg/436383.jpg" alt="image"></p><blockquote><p>前言：磨刀不误砍柴工，我的计划是先将Vue框架的学习方法构思了一下。<br><a id="more"></a></p></blockquote><h2 id="计划"><a href="#计划" class="headerlink" title="计划"></a>计划</h2><ol><li>对Vue框架拥有一个基本的认识</li><li>熟悉Vue框架的基本语法与代码书写思维</li><li>进行一些小demo的练手（官方文档上拥有很多nice的实例）</li><li>观看一个完整的Vue项目的开发过程（慕课网上有很多优质的视频教程）</li><li>阅读Vue项目的代码（实践了解这个项目的开发过程，熟悉整个项目需要实现的功能，对整个项目有也给完整的认识）</li><li>能动手就不bb，直接上手开发这个项目</li></ol><p><strong>经过以上的安排完全可以掌握Vue的开发要点，达到应用在日常开发中的目的</strong></p><hr><h2 id="1-对Vue框架拥有一个基本的认识"><a href="#1-对Vue框架拥有一个基本的认识" class="headerlink" title="1. 对Vue框架拥有一个基本的认识"></a>1. 对Vue框架拥有一个基本的认识</h2><p>&emsp;&emsp;这一阶段，我已经在上一篇文章中，进行了记录。（主要途径来源于阅读官方文档）</p><h2 id="2-熟悉Vue框架的基本语法与代码书写思维"><a href="#2-熟悉Vue框架的基本语法与代码书写思维" class="headerlink" title="2. 熟悉Vue框架的基本语法与代码书写思维"></a>2. 熟悉Vue框架的基本语法与代码书写思维</h2><p>&emsp;&emsp;这一阶段，我主要学习方式是参考<a href="https://cn.vuejs.org/v2/guide/installation.html" target="_blank" rel="noopener">官方文档</a>。</p><h2 id="3-进行一些小demo的练手"><a href="#3-进行一些小demo的练手" class="headerlink" title="3. 进行一些小demo的练手"></a>3. 进行一些小demo的练手</h2><p>&emsp;&emsp;依旧是Vue官方文档（官方文档上拥有很多nice的实例）。</p><h2 id="4-观看一个完整的Vue项目的开发过程"><a href="#4-观看一个完整的Vue项目的开发过程" class="headerlink" title="4. 观看一个完整的Vue项目的开发过程"></a>4. 观看一个完整的Vue项目的开发过程</h2><p>&emsp;&emsp;在此阶段，通过大量的资料查找与筛选，最终决定通过<a href="https://www.imooc.com/" target="_blank" rel="noopener">慕课网</a>，进行学习。慕课网上有很多优质的视频教程，安利给大家。</p><p>&emsp;&emsp;选定好资源后，通过周末的休息时间，一口气将整套视频看完了，末了觉得头晕脑胀，不过没关系，因为收获还是蛮大的。对于Vue，在脑海中拥有了更加清晰的认识。</p><p>&emsp;&emsp;当然其中的知识点，并没有全部掌握（如果要是看一遍就能掌握那简直令人感觉不可思议）。</p><p>&emsp;&emsp;不过这一步的目的，只是为了熟悉实践使用Vue开发项目的大体过程而已（毕竟一口气吃下一个大胖子，难度还是很大的）。</p><h2 id="5-阅读Vue项目的代码"><a href="#5-阅读Vue项目的代码" class="headerlink" title="5. 阅读Vue项目的代码"></a>5. 阅读Vue项目的代码</h2><p>&emsp;&emsp;实践了解这个项目的开发过程，熟悉整个项目需要实现的功能，对整个项目有也了更完整的认识。</p><p>&emsp;&emsp;一个项目开发，个人觉得首先应该对项目的需求、需要实现的功能要点，在脑海里拥有一个清晰的认识。<br><strong>毕竟代码只是工具，思想才是关键。</strong></p><h2 id="6-能动手就不bb，直接上手开发这个项目"><a href="#6-能动手就不bb，直接上手开发这个项目" class="headerlink" title="6. 能动手就不bb，直接上手开发这个项目"></a>6. 能动手就不bb，直接上手开发这个项目</h2><p>&emsp;&emsp;纸上得来终觉浅，虽然直接看代码能看懂，但是需要明白：实践动手写了，才能真正掌握。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;http://p6wzlnrcf.bkt.clouddn.com//blogimg/436383.jpg&quot; alt=&quot;image&quot;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;前言：磨刀不误砍柴工，我的计划是先将Vue框架的学习方法构思了一下。&lt;br&gt;
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>vue学习笔记</title>
@@ -299,13 +319,13 @@
       <category term="java" scheme="http://cssmini.com/categories/java/"/>
     
     
-      <category term="教学" scheme="http://cssmini.com/tags/%E6%95%99%E5%AD%A6/"/>
-    
       <category term="java" scheme="http://cssmini.com/tags/java/"/>
     
       <category term="环境变量" scheme="http://cssmini.com/tags/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/"/>
     
       <category term="PATH" scheme="http://cssmini.com/tags/PATH/"/>
+    
+      <category term="教学" scheme="http://cssmini.com/tags/%E6%95%99%E5%AD%A6/"/>
     
       <category term="千里之行" scheme="http://cssmini.com/tags/%E5%8D%83%E9%87%8C%E4%B9%8B%E8%A1%8C/"/>
     
